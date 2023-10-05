@@ -1,0 +1,6 @@
+
+Transaction - 1. OLTP- online Transactional process 2. OLAP- Online Analytical Process
+
+1.OLTP - CRUD create read update delete
+2.OLAP - datawarehouse + cubes
+

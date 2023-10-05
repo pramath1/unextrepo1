@@ -1,0 +1,27 @@
+storage - simple storage, azure datalake storage
+
+benefits of using storage data:
+1, automated backup
+2. suppoort of data analytics
+3. global replication
+4. storage tiers
+5. encryption capabilities
+6. virtual disks
+7. multiple data types
+
+hot data - frquently accessed data
+cool data - acccessed occaionaly (60 days)
+archived data - rarely accessed (120 days)
+
+advantages of azure storage:
+1. cost effectiveness (opex - operational based expenses, scalable - auto scaling)
+2. reliability
+3. storage types
+4. agility
+
+storage account- it is a container that groups a set of azure storage services together
+
+the number of storage accounts you need is based on:
+1. Data diversity
+2. cost sensitivity
+3. management overhead

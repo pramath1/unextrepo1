@@ -1,0 +1,36 @@
+semi structured data - JSON, EXML, Parquet
+
+Unstructutred data- audio, video , pictures
+
+Facts in data means numbers, aggregation
+
+3D data = facts + dimensions (collection of attributes)
+
+disadvantages ofn a file system
+security of data
+data redundancy
+ensuring location
+program data independencce
+inflexibility of data formats
+access issues
+
+A- atomicity (all transaction executed or none transaction executed)
+C- consistency (if money sent thenn money must be received)
+I- Isolation  
+D- durability (once money transaction initiated cannot be backtracked)
+
+collection of columkns is called attributes
+collection of rows is called tuple
+
+
+data model
+-data
+-data relationship
+-Data constraints
+
+
+fact table - Foreign key and Numeric measures (Sales amounts, Order qty etc)
+dim product, dim currency, dim sales territory - primary key and attrinbutes
+
+Entity Relationship model
+

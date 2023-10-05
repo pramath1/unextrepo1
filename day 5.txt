@@ -1,0 +1,4 @@
+lookup means read the information from csv or sql
+getmetadata activity- used to get the b ackground info abouthe file and the table
+
+

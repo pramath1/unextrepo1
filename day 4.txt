@@ -1,0 +1,56 @@
+SQL - Server Level Firewall and database level firewall
+
+
+Azure Data Factory
+
+ETL - Extract (diff formats like csv, txt,json); Transformation (cleaning, de-duplicating, custom calculation, convert); Load(sink, destination, DW)
+
+ELT -  Extract, Loading in raw format(ADLS), Tranformation on demand
+
+ELT better than ETL
+
+ADF- creates, orchestartes and automates the movement, transformation of data through the cloud
+
+ADF process- connect and collect-> Transform and enrich-> publish -> monitor
+
+Pipeline is a combination of multiple transformations, a pipeline cannot go beyond 40 activities.
+
+azure data factory components: linked service (adls, databricks)
+
+Integration runtime: Autoresolve integration runtime- transformation cloud to cloud, Self hosted integration runtime- on premise-cloud transformation.
+
+
+ADF activities -
+1. Data movement activities 2. Data taransformation activities 3. control activities.
+
+Pipeline is a grouping of logically related activivties.
+
+elt vs etl:
+
+ELT and ETL are both data integration processes that move raw data from a source system to a target database, such as a data lake or data warehouse. However, they differ in the order and location of the transformation step.
+
+ETL stands for Extract, Transform and Load. It means that the data is first extracted from the source system, then transformed on a separate processing server to make it compatible with the target system, and finally loaded into the target database. ETL is suitable for on-premise, relational and structured data sources that need to be cleaned and organized before loading.
+
+ELT stands for Extract, Load and Transform. It means that the data is first extracted from the source system, then loaded directly into the target database without any transformation, and finally transformed within the target database as needed. ELT is suitable for cloud-based, scalable and unstructured data sources that can be loaded in their raw form and transformed later.
+
+The main advantages of ELT over ETL are:
+
+ELT can handle larger volumes of data faster and more efficiently by leveraging the processing power and storage capacity of the cloud-based target database.
+ELT preserves the original raw data in the target database, which can be accessed and transformed anytime for different purposes and queries.
+ELT simplifies the data integration process by eliminating the need for a separate processing server and staging area.
+The main disadvantages of ELT over ETL are:
+
+ELT requires more advanced skills and tools to perform complex transformations within the target database.
+ELT may incur higher costs for using the cloud-based target database for both storage and processing.
+ELT may pose more security and compliance risks for sensitive data that is loaded without any filtering or masking.
+
+
+
+
+
+
+
+
+Ingesting and Transforming data:
+
+

@@ -1,0 +1,78 @@
+driver- workers upto n number
+worker or executor are jvms..
+spark supports python, scala, r and sql. python version is called pyspark. 
+(distributed processing)
+partition: spark breaks up data into chunks called partitions, for every executor to perform work in parallel.
+driver-> job->stage->task
+"lazy evaluation" - until and unless action code is not called, the transformation code will not get executed, this is called lazy evaluation.
+cluster manager manages the distribution of data.
+
+based on number of actions jobs will be created
+
+transformation- map, filter, groupby
+action - count, save , collect, read, write
+
+types of transformation:
+narrow transformation- e.g- select* from employees where salary>50000
+wide transformation- shuffle of data takes place among the executors, costly operation, 
+
+
+no. of jobs = no. of actions, 
+
+rdd = Resilient Distributed Datasets (An RDD is, essentially, the Spark representation of a set of data, spread across multiple machines, with APIs to let you act on it. An RDD could come from any datasource, e.g. text files, a database via JDBC, etc.)
+
+
+
+Consider When Spark is not Lazy..
+
+For Example : we are having 1GB file loaded into memory from the HDFS We are having the transformation like
+
+rdd1 = load file from HDFS
+rdd1.println(line1) 
+In this case when the 1st line is executed entry would be made to the DAG and 1GB file would be loaded to memory. In the second line the disaster is that just to print the line1 of the file the entire 1GB file is loaded onto memory.
+
+Consider When Spark is Lazy
+
+rdd1 = load file from HDFS
+rdd1.println(line1)
+In this case 1st line executed anf entry is made to the DAG and entire execution plan is built. And spark does the internal optimization. Instead of loading the entire 1GB file only 1st line of the file loaded and printed..
+
+
+
+##Jobs are divided into "stages" based on the shuffle boundary
+
+
+fundamental  component of spark is RDD.- able to recover quickly if data is lost
+1. RDD 2. Dataframe 3. Datasets(RDD + Dataframe)
+
+
+cache memory- frequently used data stored cache is stored in RAM - in memory processing
+
+
+##driver will create unresolved logical plan, analysis done based on catalog(metadata), logical plan is done, logical optimization is done, number of physical model are create and then cost model is created , this is converted into RDD.
+
+
+Unresolved Logical Plan: In the first step, the query will be parsed and a parsed logical plan will be generated. Basically, it will only check the syntax errors in the query and if the syntax is not correct then ParseException will be raised. If the Syntax check is passed then a unresolved plan will be generated.
+
+https://medium.com/@harun.raseed093/spark-logical-and-physical-plans-e111de6cc22e
+
+
+
+deployment types in spark:
+
+1. client mode
+2. cluster mode
+
+databricks cluster mode, only driver node, no worker node, hence it's a single node cluster. 
+
+
+Transformation:
+1. withcolumn
+2. with column renamed
+
+purdf = spark.read.csv.withColumnRenamed("old","new")
+
+
+
+
+

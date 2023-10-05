@@ -1,0 +1,22 @@
+Dataflow
+
+- source activity
+- sink transformation
+- union trsansformation
+- surrogate key  
+- conditional split transformation (save or send ur data to the destination)
+- derived column transformation (calculated column)
+
+*mapping
+*validate
+
+
+
+
+SOURCE(ex-csv file called product- pid, pname, qty, unitprice)----> READ THE DATA----> CREATE DERIVED COLUMN(TotalCost-- Qty*UnitPrice)----->CONDITIONAL SPLIT-----> 1. Total cost> 7000 (Table1), Total cost < 7000 (Table2)
+
+Table1 - blob storage(sink)
+Table2- sql table
+
+
+
